@@ -1,0 +1,50 @@
+body{
+    perspective: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div{
+    height: 200px;
+    width: 200px;
+   position: relative;
+   transform-style: preserve-3d;
+   transition: transform 1s;
+}
+div:hover{
+    transform: rotateY(-180deg);
+}
+
+div::before{
+    content: "front";
+        color: rgb(255, 255, 255);
+        background-color: rgb(182, 50, 116);
+        width: 200px;
+        height: 200px;
+        position: absolute;
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        
+      
+        
+
+}
+div::after {
+    content: "back";
+    color: rgb(255, 255, 255);
+    background-color: rgb(50, 182, 182);
+    width: 200px;
+    height: 200px;
+    position: absolute;
+transform: rotateY(180deg);
+    
+    
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
+
+
+}
